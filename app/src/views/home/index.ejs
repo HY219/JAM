@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>회원가입창</title>
+    <title>로그인</title>
     <style>
       h1{
         font-size=20px;
@@ -40,12 +40,12 @@
   </head>
   <body>
     <h1>JNU</h1>
-    <form>
+    <form action = "/login" method = "POST">
     <table class="로그인테이블" align="center">
 
-        <tr><td><input type="text" size="40"  name="id" placeholder="아이디" required /></td></tr>
+        <tr><td><input id = "id" type="text" size="40"  name="id" placeholder="아이디" required /></td></tr>
         <br>
-        <tr><td><input type="text" size="40"  name="password" placeholder="비밀번호" required /></td></tr>
+        <tr><td><input id = "password" type="text" size="40"  name="password" placeholder="비밀번호" required /></td></tr>
         <br>
         </table>
         <table class="" align="center">

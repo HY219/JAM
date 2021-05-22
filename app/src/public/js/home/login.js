@@ -2,19 +2,18 @@
 
 const id = document.querySelector("#id");
 const password = document.querySelector("#password");
-const signupBtn = document.querySelector("button");
+const loginBtn = document.querySelector("button");
 
 
-signupBtn.addEventListener("click", signup);
+loginBtn.addEventListener("click", login);
 
-
-function signup(){
+function login(){
     const req = {
         id : id.value,
         password : password.value,
     };
 
-    fetch("/signup", {
+    fetch("/login", {
         method : "POST",
         headers : {
             "Content-Type" : "application/json"
