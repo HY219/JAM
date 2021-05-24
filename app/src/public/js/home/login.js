@@ -19,5 +19,17 @@ function login(){
             "Content-Type" : "application/json"
         },
         body : JSON.stringify(req),
+    })
+    .then((res)=>res.json())
+    .then((res)=>{
+        if(res.success){
+            location.href="/notice";
+        } else{
+            alert(res.msg);
+            location.href="/login"
+        }
+    })
+    .cathc((err) => {
+        console.error(new Error("로그인 중 에러발생"));
     });
 }

@@ -1,5 +1,8 @@
 "use strict";
 
+const User = require("../../models/User");
+
+
 const output = {
     login : (req, res) =>{
         res.render("home/index");
@@ -7,17 +10,25 @@ const output = {
     
     signup : (req, res) => {
         res.render("home/signup");
-    }
+    },
 
-}
+    notice : (req, res) =>{
+        res.render("home/notice_main");
+    },
+    notice_list : (req, res) =>{
+        res.render("home/notice_list");
+    },
+};
 
 const process = {
     login : (req, res) =>{
-        console.log(req.body);
+        const user = new User(req.body);
+        const response = user.login();
+        return res.json(response);
     },
     signup: (req, res) =>{
         console.log(req.body);
-    }
+    },
 }
 
 module.exports = {
