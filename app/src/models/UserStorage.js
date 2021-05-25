@@ -1,36 +1,31 @@
 "use strict"
 
-class UserStorage {
-    static #users = {
-        id : ["hihi", "smilsi"],
-        password : ["1234", "123rs"],
-    };
+const db = require("../config/db");
 
-    static getUsers(...fields) {
-        const users = this.#users;
-        const newUsers = fields.reduce((newUsers, field) => {   //모든 유저 데이터 받기
-            if(users.hasOwnProperty(field)) {
-                newUsers[field] = user[field];
-            }
-            return newUsers;
-        }, {});
-        return newUsers;
-    }
+class UserStorage {
 
     static getUserInfo(id){
-        const users = this.#users;
-        const idx = users.id.indexOf(id);
-        const userInfo = Object.keys(users).reduce((newUser, info) =>{  //idx에 해당하는 유저데이터 한번에 저장.
-            newUser[info] = users[info][idx];
-            return newUser;
-        }, {});
-        
-        return userInfo;
+        return new Promise((resolve, reject) => {
+            const query = "SELECT * FROM user WHERE id = ?;";
+            db.query(query,
+                [id], 
+                (err, data) =>{
+                if(err) reject(`${err}`);
+                resolve(data[0]);
+            });
+        });
     }
 
     static save(userInfo){
-        const users = this.#users;
-        
+        return new Promise((resolve, reject) => {
+            const query = "INSERT INTO user(id, password, username, email, phone) VALUES(?,?,?,?,?)";
+            db.query(query,
+                [userInfo.id, userInfo.password, userInfo.username, userInfo.email, userInfo.phone], 
+                (err) =>{
+                if(err) reject(`${err}`);
+                resolve({success : true});
+            });
+        });
     }
 }
 

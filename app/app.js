@@ -4,6 +4,8 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
 const home = require("./src/routes/home");
+const dotenv = require("dotenv");
+dotenv.config();
 
 app.set("views", "./src/views");
 app.set("view engine", "ejs");
