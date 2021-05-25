@@ -27,7 +27,9 @@ const process = {
         return res.json(response);
     },
     signup: (req, res) =>{
-        console.log(req.body);
+        const user = new User(req.body);
+        const response = user.signup();
+        return res.json(response);
     },
 }
 
