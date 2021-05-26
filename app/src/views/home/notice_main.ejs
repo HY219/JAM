@@ -5,6 +5,9 @@
     <title>notice_main</title>
   </head>
   <style>
+    body{
+      background-color: ivory;
+    }
     .header{
       font-size:2em;
       font-weight: bolder;
@@ -44,36 +47,38 @@
     .category{
       display:flex;
       justify-content:center;
-
+    }
+    .category>a :hover{
+      background-color:gainsboro;
     }
     </style>
   <body>
     <div class ="header"><style="float:left;">JNU</style>
       <div class="tab">
-        <a href="">설정</a></div>
+        <a href="/usersetting">설정</a></div>
         <div class="tab">
-          <a href="팀빌딩메인창">팀원모집</a>
+          <a href="team_main">팀원모집</a>
           </div>
     <div class="tab">
-      <a href="공지사항메인창">공지사항</a>
+      <a href="/notice">공지사항</a>
     </div>
       </div>
 <br>
     <div class="category">
     <a href="/notice_list?category=SW"><button  type="button" float="left">SW</button></a>
-    <a href="/notice_list?category=Language"><button id = "Language"  type="button">어학</button></a>
-    <a href="/notice_list?category=Social"><button id = "Social"  type="button">인문사회학</button></a><br>
+    <a href="/notice_list?category=Language"><button type="button">어학</button></a>
+    <a href="/notice_list?category=Social"><button  type="button">인문사회학</button></a><br>
     </div>
     <div class="category">
-    <a href="/notice_list?category=Job"><button id = "Job"  type="button">취업</button></a>
-    <a href="/notice_list?category=Startup"><button id = "Startup"  type="button">창업</button></a>
-    <a href="/notice_list?category=Supporters"><button id = "Supporters"  type="button">서포터즈</button></a><br>
+    <a href="/notice_list?category=Job"><button  type="button">취업</button></a>
+    <a href="/notice_list?category=Startup"><button  type="button">창업</button></a>
+    <a href="/notice_list?category=Supporters"><button  type="button">서포터즈</button></a><br>
     </div>
     <div class="category">
-    <a href="/notice_list?category=Competition"><button id = "Competition"  type="button">공모전</button></a>
-    <a href="/notice_list?category=Scholarship"><button id = "Scholarship"  type="button">장학금</button></a>
-    <a href="/notice_list?category=Volunteer"><button id = "Volunteer"  type="button">봉사활동</button></a>
-    <a href="/notice_list?category=etc"><button id = "etc" type="button">기타</button></a>
+    <a href="/notice_list?category=Competition"><button  type="button">공모전</button></a>
+    <a href="/notice_list?category=Scholarship"><button   type="button">장학금</button></a>
+    <a href="/notice_list?category=Volunteer"><button   type="button">봉사활동</button></a>
+    <a href="/notice_list?category=etc"><button  type="button">기타</button></a>
     </div>
   </body>
 </html>

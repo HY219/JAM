@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>team_content</title>
+  </head>
+  <style>
+    body{
+      background-color: ivory;
+    }
+    .header{
+      font-size:2em;
+      font-weight: bolder;
+      padding:20px;
+      margin:20px;
+      text-align: left;
+      display:block;
+      border-bottom:1px solid black;
+    }
+    .tab{
+      font-size: 13px;
+      border-radius:20%;
+      border:3px solid black;
+      padding:7px;
+      margin:20px;
+      float: right;
+      text-align: right;
+      display:inline;
+    }
+    a{
+      text-decoration:none;
+      color:black;
+    }
+    #person{
+      margin:10px 10px 10px 30px;
+    }
+    #void{
+      border:white;
+      margin:10px;
+      margin-left:600px;
+      display:inline-block;
+    }
+    button[type="button"] {
+         color: black;
+         border: 1px solid black;
+         border-radius:20%;
+         font-size: 15px;
+         padding:5px 10px 5px 10px;
+         margin:10px;
+         display:inline-block;
+         background-color: rgb(200, 200, 200);
+         cursor:pointer;
+    }
+    .box{
+      border:1px solid black;
+      border-radius:20%;
+      padding:10px;
+      margin:10px 10px 10px 100px;
+      display:inline-block;
+    }
+    .team_content_title{
+      color: black;
+      border-bottom: 1px solid black;
+      font-size: 19px;
+      width: 1200px;
+      padding:10px;
+      margin:10px 0px 10px 100px;
+      display:inline-block;
+    }
+    .title input[type="text"]{
+      color: black;
+      border: 1px solid black;
+      font-size: 19px;
+      width: 1000px;
+      padding:10px;
+      margin:10px 0px 10px 100px;
+      display:inline-block;
+    }
+    .person input[type="number"] {
+      color: black;
+      border: 1px solid black;
+      font-size: 15px;
+      width: 40px;
+      height: 10px;
+      padding:10px;
+      margin:1px;
+      display:inline-block;
+      }
+     .team_comment{
+       font-size: 19px;
+       width: 1000px;
+       height: 60px;
+       padding:10px;
+       margin:10px 0px 10px 100px;
+       display:inline-block;
+     }
+     .team_content{
+       color:black;
+       border:1px;
+       border-bottom:1px solid black;
+       font-size: 19px;
+       width: 1200px;
+       height: 500px;
+       padding:10px;
+       margin:50px 0px 10px 100px;
+       display:block;
+     }
+     .registration button[type="submit"] {
+          color: white;
+          border: 1px solid black;
+          border-radius:20%;
+          font-size: 15px;
+          padding:5px 20px 5px 20px;
+          margin: 0px 10px 10px 10px;
+          display:inline-block;
+          background-color: rgb(100, 150, 1000);
+          cursor:pointer;
+     }
+     .team_category input[type="button"] {
+       border:1px solid black;
+       border-radius:20%;
+       font-size:16px;
+       padding:10px;
+       margin:0;
+       background-color:white;
+       display:inline-block;
+     }
+     .person input[type="button"] {
+       border:1px solid black;
+       border-radius:20%;
+       font-size:16px;
+       padding:9px 25px 9px 25px;
+       margin:0;
+       background-color:white;
+       display:inline-block;
+     }
+    </style>
+  <body>
+    <div class ="header"><style="float:left;">JNU</style>
+      <div class="tab">
+        <a href="/usersetting">설정</a></div>
+        <div class="tab">
+          <a href="/team_main">팀원모집</a>
+          </div>
+    <div class="tab">
+      <a href="/notice">공지사항</a>
+    </div>
+      </div>
+      <br>
+      <div class="team_content_title">제목</div>
+      <br>
+
+      <span class="box">카테고리</span>
+      <span class="team_category"><input type="button" name="category" placeholder="SW" value="카테고리"></span>
+
+      <span class="box" id="person">모집인원</span>
+      <span class="person"><input type="button" name="인원수명" value="n명"></span>
+      <span class="box" id="void">&nbsp;</span>
+
+      <span class="edit"><button type="button" name="edit"><a href="">수정</a></button></span>
+      <span class="delete"><button type="button" name="delete">삭제</button></span>
+
+      <div class="team_content">팀원모집내용입니다.</div>
+
+      <textarea class="team_comment" id="registration">글을 작성하세요.</textarea>
+      <span class="registration"><button type="submit" name="registration"><label for="registration">등록</label></span>
+
+  </body>
+</html>

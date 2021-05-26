@@ -5,6 +5,9 @@
     <title>team_main</title>
   </head>
   <style>
+    body{
+      background-color: ivory;
+    }
     .header{
       font-size:2em;
       font-weight: bolder;
@@ -104,29 +107,32 @@
       text-align:center;
       margin-bottom:30px;
       }
+      .category>a :hover{
+      background-color:yellow;
+    }
     </style>
   <body>
     <div class ="header"><style="float:left;">JNU</style>
       <div class="tab">
-        <a href="사용자설정창">설정</a></div>
+        <a href="/usersetting">설정</a></div>
         <div class="tab">
-          <a href="팀빌딩메인창">팀원모집</a>
+          <a href="/team_main">팀원모집</a>
           </div>
     <div class="tab">
-      <a href="공지사항메인창">공지사항</a>
+      <a href="/notice">공지사항</a>
     </div>
       </div>
       <div class="category">
-      <a href="SW"><button type="button">SW</button></a>
-      <a href="어학"><button type="button">어학</button></a>
-      <a href="인문사회학"><button type="button">인문사회학</button></a>
-      <a href="취업"><button type="button">취업</button></a>
-      <a href="창업"><button type="button">창업</button></a>
-      <a href="서포터즈"><button type="button">서포터즈</button></a>
-      <a href="공모전"><button type="button">공모전</button></a>
-      <a href="장학금"><button type="button">장학금</button></a>
-      <a href="봉사활동"><button type="button">봉사활동</button></a>
-      <a href="기타"><button type="button">기타</button></a>
+        <a href="/team_main?category=SW"><button type="button">SW</button></a>
+        <a href="/team_main?category=Language"><button type="button">어학</button></a>
+        <a href="/team_main?category=Social"><button type="button">인문사회학</button></a><br>
+        <a href="/team_main?category=Job"><button type="button">취업</button></a>
+        <a href="/team_main?category=Startup"><button type="button">창업</button></a>
+        <a href="/team_main?category=Supporters"><button type="button">서포터즈</button></a><br>
+        <a href="/team_main?category=Competition"><button type="button">공모전</button></a>
+        <a href="/team_main?category=Scholarship"><button type="button">장학금</button></a>
+        <a href="/team_main?category=Volunteer"><button type="button">봉사활동</button></a>
+        <a href="/team_main?category=etc"><button type="button">기타</button></a>
       </div>
 <br>
   <div class="team_board">

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>team_writing</title>
+  </head>
+  <style>
+    body{
+      background-color: ivory;
+    }
+    .header{
+      font-size:2em;
+      font-weight: bolder;
+      padding:20px;
+      margin:20px;
+      text-align: left;
+      display:block;
+      border-bottom:1px solid black;
+    }
+    .tab{
+      font-size: 13px;
+      border-radius:20%;
+      border:3px solid black;
+      padding:7px;
+      margin:20px;
+      float: right;
+      text-align: right;
+      display:inline;
+    }
+    a{
+      text-decoration:none;
+      color:black;
+    }
+    #person{
+      margin:10px 10px 10px 30px;
+    }
+    .box{
+      border:1px solid black;
+      border-radius:20%;
+      padding:10px;
+      margin:10px 10px 10px 100px;
+      display:inline-block;
+    }
+    .title input[type="text"]{
+      color: black;
+      border: 1px solid black;
+      font-size: 19px;
+      width: 1000px;
+      padding:10px;
+      margin:10px 0px 10px 100px;
+      display:inline-block;
+    }
+    .person input[type="number"] {
+      color: black;
+      border: 1px solid black;
+      font-size: 15px;
+      width: 40px;
+      height: 10px;
+      padding:10px;
+      margin:1px;
+      display:inline-block;
+      }
+     button[type="submit"] {
+          color: black;
+          border: 1px solid black;
+          border-radius:20%;
+          font-size: 15px;
+          padding:5px 30px 5px 30px;
+          margin:10px 10px 10px 100px;
+          display:inline-block;
+          background-color: rgb(200, 200, 200);
+          cursor:pointer;
+      }
+     .team_writing{
+       color:black;
+       font-size: 19px;
+       width: 1200px;
+       height: 500px;
+       padding:10px;
+       margin:10px 0px 10px 100px;
+       display:block;
+     }
+     .select{
+       color: black;
+       border: 1px solid black;
+       font-size: 13px;
+       text-align:center;
+       height:35px;
+       padding:10px;
+       margin:1px;
+       display:inline-block;
+       cursor:pointer;
+     }
+    </style>
+  <body>
+    <div class ="header"><style="float:left;">JNU</style>
+      <div class="tab">
+        <a href="/usersetting">설정</a></div>
+        <div class="tab">
+          <a href="/team_main">팀원모집</a>
+          </div>
+    <div class="tab">
+      <a href="/notice">공지사항</a>
+    </div>
+      </div>
+      <br>
+      <span class="title"><input type="text" name="title" placeholder="제목" required></span>
+      <button type="submit" value="작성">작성</button>
+      <br>
+
+      <span class="box">카테고리</span>
+        <select class="select" name="s[s]" title="검색타입">
+        <option value="SW">SW</option>
+        <option value="어학">어학</option>
+        <option value="인문사회학">인문사회학</option>
+        <option value="취업">취업</option>
+        <option value="창업">창업</option>
+        <option value="서포터즈">서포터즈</option>
+        <option value="공모전">공모전</option>
+        <option value="장학금">장학금</option>
+        <option value="봉사활동">봉사활동</option>
+        <option value="기타">기타</option>
+        </select>
+      <span class="box" id="person">모집인원</span>
+      <span class="person"><input type="number" min="0" name="인원수" placeholder="1">명</span>
+
+      <textarea class="team_writing">글을 작성하세요.</textarea>
+
+  </body>
+</html>
