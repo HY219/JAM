@@ -11,7 +11,7 @@ router.get("/signup", ctrl.output.signup);
 router.get("/notice", ctrl.output.notice);
 router.get("/usersetting", ctrl.output.usersetting);
 router.get("/notice_list", ctrl.output.notice_list);
-router.get("/notice/content", ctrl.output.notice_content);
+router.get("/notice_list/content", ctrl.output.notice_content);
 
 router.get("/team_main", ctrl.output.team_main);
 router.get("/team_write", ctrl.output.team_write);
@@ -19,6 +19,7 @@ router.get("/team_content",ctrl.output.team_content);
 
 router.post("/login", ctrl.process.login);
 router.post("/signup", ctrl.process.signup);
+router.post("/team_write", ctrl.process.team_write);
 
 
 module.exports = router;

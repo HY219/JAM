@@ -2,11 +2,11 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>team_writing</title>
+    <title>JAM : 제주대 활동관리 사이트 > 팀원모집</title>
   </head>
   <style>
     body{
-      background-color: ivory;
+      background-color: aliceblue;
     }
     .header{
       font-size:2em;
@@ -91,7 +91,12 @@
        display:inline-block;
        cursor:pointer;
      }
+     input[type="url"]{
+       font-size:15px;
+       width: 500px;
+     }
     </style>
+    <script src="/js/home/CRUD.js" defer></script>
   <body>
     <div class ="header"><style="float:left;">JNU</style>
       <div class="tab">
@@ -123,8 +128,7 @@
         </select>
       <span class="box" id="person">모집인원</span>
       <span class="person"><input type="number" min="0" name="인원수" placeholder="1">명</span>
-
       <textarea class="team_writing">글을 작성하세요.</textarea>
-
+      <%-include('footer')%>
   </body>
 </html>
